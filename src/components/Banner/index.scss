@@ -1,0 +1,112 @@
+.banner {
+  min-height: 100vh;
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/img/banner-bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  [data-aos="fade-down"] {
+    transform: translate3d(0, -300px, 0);
+  }
+
+  .leftColBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+
+    .tagline {
+      width: max-content;
+      display: inline-block;
+      padding: 0.5rem 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.0625rem;
+      background: linear-gradient(
+        90deg,
+        rgba(170, 54, 124, 0.5) 0,
+        rgba(74, 47, 189, 0.5) 100%
+      );
+
+      border: 0.0625rem solid rgba(255, 255, 255, 0.5);
+      border-radius: 0.5rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      letter-spacing: 0.05rem;
+      line-height: 1;
+      height: 12.5rem;
+
+      @media screen and (max-width: 768px)  {
+        height: 15rem;
+      }
+
+      .wrap {
+        border-right: 0.1rem solid #666;
+      }
+    }
+
+    p {
+      color: #b8b8b8;
+      font-size: 1.25rem;
+      letter-spacing: 0.05rem;
+      line-height: 1;
+    }
+
+    a {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.05rem;
+
+      svg {
+        margin-left: 0.625rem;
+        font-size: 1.5rem;
+        transition: 0.3s ease-in-out;
+        line-height: 1;
+      }
+
+      &:hover {
+        svg {
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .rightColBanner {
+    img {
+      animation: updown 3s linear infinite;
+    }
+
+    @keyframes updown {
+      0% {
+        transform: translateY(-1.25rem);
+      }
+      50% {
+        transform: translateY(1.25rem);
+      }
+      100% {
+        transform: translateY(-1.25rem);
+      }
+    }
+  }
+}
+
+span.cursor {
+  font-weight: 400;
+  color: lightblue;
+}

@@ -1,0 +1,44 @@
+.social-icons {
+  display: inline-flex;
+  gap: 1rem;
+
+  a {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgba(217, 217, 217, 0.1);
+    border-radius: 50%;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.5);
+
+    &::before {
+      content: "";
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 0.3s ease-in-out;
+    }
+
+    svg {
+      color: #fff;
+      transition: 0.3s ease-in-out;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1);
+      }
+
+      svg {
+        filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+          hue-rotate(346deg) brightness(95%) contrast(86%);
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+/* Custom Fonts */
+@import url("styles/fonts.scss");
+
+/* Default CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.75rem;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 95%;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 90%;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 85%;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 80%;
+  }
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: "Centra", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p,
+a,
+li,
+button,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+:focus:is(input, textarea, select) {
+  outline: none;
+}
+
+@media (min-width: 1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 9.5rem;
+  }
+}

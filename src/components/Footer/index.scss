@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+
+  background: url("../../assets/img/footer-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .row {
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .logo-container {
+      @media screen and (max-width: 480px) {
+        display: inline-flex;
+        justify-content: center;
+      }
+      img {
+        width: 7rem;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: #b8b8b8;
+      letter-spacing: 0.03125rem;
+      margin-top: 1.25rem;
+    }
+  }
+}

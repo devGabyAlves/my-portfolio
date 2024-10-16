@@ -1,0 +1,133 @@
+nav.navbar {
+  width: 100%;
+  padding: 0;
+  padding: 1.25rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  transition: 0.3s ease-in;
+
+  @media screen and (max-width: 768px) {
+    background-color: rgba(18, 18, 18, 0.75);
+  }
+
+  &.scrolled {
+    padding: 1rem 0;
+    background-color: rgba(18, 18, 18, 0.75);
+  }
+
+  .container {
+    gap: 0.5rem;
+  }
+
+  a.navbar-brand {
+    max-width: 12%;
+  }
+
+  .navbar-nav {
+    a.nav-link.navbar-link {
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 0.0625rem;
+      padding: 0 1.5rem;
+      font-size: 1.25rem;
+      opacity: 0.75;
+      transition: 0.3s ease-in-out;
+
+      &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+
+        opacity: 1;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .navbar-toggler:is(:active, :focus) {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .navbar-toggler {
+    .navbar-toggler-icon {
+      width: 1.5rem;
+      height: 1.25rem;
+      position: relative;
+      background-image: none;
+      border-bottom: 0.125rem solid #fff;
+      transition: 0.3s linear;
+      top: -0.125rem;
+
+      &::after,
+      &::before {
+        content: "";
+        width: 1.5rem;
+        height: 0.125rem;
+        position: absolute;
+        background: #fff;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transition: 0.3s linear;
+      }
+
+      &::after {
+        top: 0.5625rem;
+      }
+    }
+
+    &:not(.collapsed) {
+      .navbar-toggler-icon {
+        &::before {
+          transform: translateY(0.5rem) rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+span.navbar-text {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  a.vvd {
+    font-size: 1rem;
+    padding: 1.25rem 2rem;
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    border: 0.0625rem solid #fff;
+    background: transparent;
+    transition: 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      width: 0%;
+      height: 100%;
+      position: absolute;
+      background-color: #fff;
+      left: 0;
+      top: 0;
+      transition: 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: #121212;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}

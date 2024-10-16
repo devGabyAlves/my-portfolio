@@ -1,0 +1,70 @@
+.skills {
+  position: relative;
+  padding-bottom: 3.25rem;
+  min-height: 85vh;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 2rem 3.25rem;
+  }
+
+  [data-aos="fade-right"] {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  .skill-bx {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    padding: 3.75rem 3.25rem;
+    margin-top: -1rem;
+    background: #151515;
+    border-radius: 4rem;
+
+    @media screen and (max-width: 480px) {
+      padding: 3.75rem 0;
+    }
+
+    p {
+      color: #b8b8b8;
+      font-size: 1.25rem;
+      letter-spacing: 0.05rem;
+      line-height: 1;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .skill-slider {
+      margin: 0 auto;
+      width: 80%;
+      position: relative;
+      gap: 1rem;
+
+      .react-multiple-carousel__arrow {
+        @media screen and (max-width: 320px) {
+          min-width: 3rem;
+          min-height: 3rem;
+        }
+      }
+
+      .item {
+        svg {
+          font-size: 10rem;
+        }
+      }
+    }
+  }
+
+  .background-image-left {
+    width: 40%;
+    position: absolute;
+    top: 28%;
+    bottom: 0;
+    z-index: -1;
+  }
+}
