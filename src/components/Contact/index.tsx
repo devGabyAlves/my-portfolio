@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../../assets/img/contact-img.svg";
+import { sendEmail } from '../../services/resendService';
 import "./index.scss";
 
 export const Contact = () => {
@@ -59,20 +60,16 @@ export const Contact = () => {
 
     setButtonText("Eviando...");
     try {
-      await axios.post(
-        "https://lazy-cyan-hen-hose.cyclic.app/contact",
-        formDetails
-      );
-
-      setStatus({ success: true, message: "Mensagem enviada com sucesso." });
+      await sendEmail(formDetails);
+      setStatus({ success: true, message: 'Mensagem enviada com sucesso.' });
     } catch (error) {
       setStatus({
         success: false,
-        message: "Algo deu errado, tenta novamente mais tarde.",
+        message: 'Algo deu errado, tente novamente mais tarde.',
       });
     }
 
-    setButtonText("Enviar");
+    setButtonText('Enviar');
     setIsSubmiting(false);
     setFormDetails(formInitialDetails);
   };
