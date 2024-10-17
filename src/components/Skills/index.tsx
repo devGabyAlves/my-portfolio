@@ -1,7 +1,7 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { SiJavascript, 
+import { SiSqlalchemy, 
   SiMysql, SiReact, 
   SiTailwindcss, 
   SiTypescript, 
@@ -12,8 +12,9 @@ import { SiJavascript,
   SiGunicorn,
   SiAmazonaws, 
   SiDatadog,
-  SiOwasp } from 'react-icons/si';
-import Carousel from "react-multi-carousel";
+  SiOwasp,
+  SiQualys,
+  } from 'react-icons/si';
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../../assets/img/color-sharp.png";
 import "./index.scss";
@@ -23,90 +24,34 @@ export const Skills = () => {
     Aos.init();
   }, []);
 
-  const responsive = {
-    extraLargeScreens: {
-      breakpoint: { max: 4000, min: 1401 },
-      items: 5,
-    },
-    superLargeDesktop: {
-      breakpoint: { max: 1400, min: 1025 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 769 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 768, min: 481 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 480, min: 0 },
-      items: 1,
-    },
-  };
+  const frontEnd = [
+    { icon: <SiTypescript color='#3178C6' />, tech: "Typescript" },
+    { icon: <SiReact color='#61DAFB' />, tech: "ReactJs" },
+    { icon: <SiTailwindcss color='#38B2AC' />, tech: "TailwindCSS" },
+  ];
 
-  const techs = [{
-    icon: <SiTypescript color='#3178C6' />, 
-    tech: "Typescript",
+  const backEnd = [
+    { icon: <SiPython color='#3776AB' />, tech: "Python" },
+    { icon: <SiFlask color='#000000' />, tech: "Flask" }, 
+    { icon: <SiGunicorn color='#499848' />, tech: "Gunicorn" },
+  ];
 
-  }, 
-  {
-    icon: <SiJavascript color='#F7DF1E' />, 
-    tech: "JavaScript",
+  const databases = [
+    { icon: <SiMysql color='#4479A1' />, tech: "MySQL" },
+    { icon: <SiSqlalchemy color='#F7DF1E' />, tech: "SQLAlchemy" }, 
+  ];
 
-  },
-  {
-    icon: <SiReact color='#61DAFB' />, 
-    tech: "ReactJs",
-  }, 
-  {
-    icon: <SiTailwindcss color='#38B2AC' />, 
-    tech: "TailwindCSS",
+  const infraDevOps = [
+    { icon: <SiDocker color='#2496ED' />, tech: "Docker" },
+    { icon: <SiNginx color='#009639' />, tech: "Nginx" },
+    { icon: <SiAmazonaws color='#FF9900' />, tech: "AWS" },
+    { icon: <SiDatadog color='#632CA6' />, tech: "Datadog" },
+  ];
 
-  },
-  {
-    icon: <SiPython color='#3776AB' />, 
-    tech: "Python",
-
-  },
-  {
-    icon: <SiFlask color='#FFFFFFF' />, 
-    tech: "Flask",
-
-  },
-  {
-    icon: <SiDocker color='#2496ED' />, 
-    tech: "Docker",
-
-  },
-  {
-    icon: <SiNginx color='#009639' />, 
-    tech: "Nginx",
-  },
-  {
-    icon: <SiGunicorn color='#499848' />, 
-    tech: "Gunicorn",
-  },
-  {
-    icon: <SiMysql color='#4479A1' />, 
-    tech: "MySQL"
-  },
-  {
-    icon: <SiAmazonaws color='#FF9900' />, 
-    tech: "AWS",
-
-  },
-  {
-    icon: <SiDatadog color='#632CA6' />, 
-    tech: "Datadog",
-
-  },
-  {
-    icon: <SiOwasp color='#FFFFFFF' />, 
-    tech: "OWASP",
-  }
-  ]
+  const security = [
+    { icon: <SiOwasp color='#000000' />, tech: "OWASP" }, 
+    { icon: <SiQualys color='#D52B1E' />, tech: "Qualys" }, 
+  ];
 
   return (
     <section className="skills" id="skills">
@@ -120,26 +65,62 @@ export const Skills = () => {
               data-aos-easing="ease-in-out"
             >
               <h2>Habilidades</h2>
-
               <p>
-                Minha capacitação é proveniente de cursos e conteúdos
-                disponíveis na web. Ao longo de 2 anos e meio na área consegui
-                por meios de projetos pessoais aprender:
+              Meus conhecimentos e capacitação foram adquiridos através de conteúdos disponíveis na web, 
+              projetos práticos e experiência no ambiente de trabalho. Ao longo de 2 anos e meio na área, 
+              desenvolvi habilidades em diversas tecnologias, sendo elas:
               </p>
 
-              <Carousel
-                responsive={responsive}
-                infinite
-                className="skill-slider"
-              >
-                {techs.map((el, idx) => (
+              <h3>Front-End</h3>
+              <div className="skills-grid">
+                {frontEnd.map((el, idx) => (
                   <div className="item" key={idx}>
                     {el.icon}
                     <h5>{el.tech}</h5>
                   </div>
-                ))
-                }
-              </Carousel>
+                ))}
+              </div>
+
+              <h3>Back-End</h3>
+              <div className="skills-grid">
+                {backEnd.map((el, idx) => (
+                  <div className="item" key={idx}>
+                    {el.icon}
+                    <h5>{el.tech}</h5>
+                  </div>
+                ))}
+              </div>
+
+              <h3>Bancos de Dados</h3>
+              <div className="skills-grid">
+                {databases.map((el, idx) => (
+                  <div className="item" key={idx}>
+                    {el.icon}
+                    <h5>{el.tech}</h5>
+                  </div>
+                ))}
+              </div>
+
+              <h3>Infraestrutura/DevOps</h3>
+              <div className="skills-grid">
+                {infraDevOps.map((el, idx) => (
+                  <div className="item" key={idx}>
+                    {el.icon}
+                    <h5>{el.tech}</h5>
+                  </div>
+                ))}
+              </div>
+
+              <h3>Segurança</h3>
+              <div className="skills-grid">
+                {security.map((el, idx) => (
+                  <div className="item" key={idx}>
+                    {el.icon}
+                    <h5>{el.tech}</h5>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </Col>
         </Row>
