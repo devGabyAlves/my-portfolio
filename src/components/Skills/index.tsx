@@ -1,7 +1,18 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { SiJavascript, SiMysql, SiReact, SiTailwindcss, SiTypescript, SiPython, SiFlask, SiDocker, SiAmazonaws, SiOwasp } from 'react-icons/si';
+import { SiJavascript, 
+  SiMysql, SiReact, 
+  SiTailwindcss, 
+  SiTypescript, 
+  SiPython, 
+  SiFlask, 
+  SiDocker, 
+  SiNginx,
+  SiGunicorn,
+  SiAmazonaws, 
+  SiDatadog,
+  SiOwasp } from 'react-icons/si';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../../assets/img/color-sharp.png";
@@ -36,12 +47,12 @@ export const Skills = () => {
   };
 
   const techs = [{
-    icon: <SiTypescript color='#3178C6' />, // Azul oficial do TypeScript
+    icon: <SiTypescript color='#3178C6' />, 
     tech: "Typescript",
 
   }, 
   {
-    icon: <SiJavascript color='#F7DF1E' />, // Amarelo padrão do JavaScript
+    icon: <SiJavascript color='#F7DF1E' />, 
     tech: "JavaScript",
 
   },
@@ -70,12 +81,25 @@ export const Skills = () => {
 
   },
   {
+    icon: <SiNginx color='#009639' />, 
+    tech: "Nginx",
+  },
+  {
+    icon: <SiGunicorn color='#499848' />, 
+    tech: "Gunicorn",
+  },
+  {
     icon: <SiMysql color='#4479A1' />, 
     tech: "MySQL"
   },
   {
     icon: <SiAmazonaws color='#FF9900' />, 
     tech: "AWS",
+
+  },
+  {
+    icon: <SiDatadog color='#632CA6' />, 
+    tech: "Datadog",
 
   },
   {
