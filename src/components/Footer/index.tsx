@@ -7,13 +7,12 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <Row className="w-100">
-        <Col className="logo-container">
+        <Col className="logo-container text-center text-sm-start">
           <img src={logo} alt="Logo" />
         </Col>
 
         <Col className="text-center text-sm-end">
           <SocialIcons />
-
           <p>CopyRight 2024. All Right Reserved</p>
         </Col>
       </Row>
