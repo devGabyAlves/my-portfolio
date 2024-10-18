@@ -7,9 +7,15 @@
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  will-change: background-position, background-size; 
+
+  @media screen and (max-width: 768px) {
+    min-height: 90vh; 
+  }
 
   [data-aos="fade-down"] {
     transform: translate3d(0, -300px, 0);
+    will-change: transform; 
   }
 
   .leftColBanner {
@@ -45,12 +51,20 @@
       letter-spacing: 0.05rem;
       line-height: 1;
       min-height: 12.5rem; 
-      height: auto; 
+      height: auto;
 
-      @media screen and (max-width: 768px)  {
-        height: 15rem;
-        min-height: 15rem;
-        font-size: 3rem;
+      @media screen and (max-width: 1024px) {
+        font-size: 3.5rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: auto;
+        font-size: 2.5rem; 
+        line-height: 1.2;
+      }
+
+      @media screen and (max-width: 480px) {
+        font-size: 2rem;
       }
 
       .wrap {
@@ -59,10 +73,10 @@
     }
 
     p {
-      color: #b8b8b8;
+      color: #d1d1d1; 
       font-size: 1.25rem;
       letter-spacing: 0.05rem;
-      line-height: 1;
+      line-height: 1.5; 
     }
 
     a {
@@ -78,13 +92,13 @@
       svg {
         margin-left: 0.625rem;
         font-size: 1.5rem;
-        transition: 0.3s ease-in-out;
+        transition: margin-left 0.5s ease-in-out; 
         line-height: 1;
       }
 
       &:hover {
         svg {
-          margin-left: 1.5rem;
+          margin-left: 1.25rem; 
         }
       }
     }
@@ -104,6 +118,12 @@
       }
       100% {
         transform: translateY(-1.25rem);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      img {
+        width: 100%; 
       }
     }
   }

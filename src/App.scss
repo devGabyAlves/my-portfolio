@@ -12,6 +12,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 4.75rem;
+  height: 100%; 
 
   @media screen and (max-width: 1024px) {
     font-size: 95%;
@@ -36,6 +37,13 @@ body {
   background-color: #121212 !important;
   color: #fff !important;
   font-family: "Centra", sans-serif !important;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1,
@@ -73,6 +81,7 @@ a {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -86,9 +95,32 @@ button {
   outline: none;
 }
 
+footer {
+  width: 100%;
+  background-color: #121212;
+  padding: 1rem 0; 
+  text-align: center;
+}
+main .container {
+  max-width: 100%;
+  padding: 0 9.5rem;
+
+  @media (min-width: 1700px) {
+    padding: 0 9.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+/* Ajustes finais para responsividade */
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
-    padding: 0 9.5rem;
   }
 }

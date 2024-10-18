@@ -1,24 +1,42 @@
 .footer {
   display: flex;
   align-items: center;
-  padding: 1.5rem;
-
+  justify-content: space-between; 
+  padding: 1.5rem 2rem; 
   background: url("../../assets/img/footer-bg.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: auto;
 
   .row {
-    @media screen and (max-width: 480px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+
+    @media screen and (max-width: 768px) {
       flex-direction: column;
       gap: 1.25rem;
     }
 
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 1.5rem; 
+    }
+
     .logo-container {
+      @media screen and (max-width: 768px) {
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 1rem; 
+      }
+      
       @media screen and (max-width: 480px) {
         display: inline-flex;
         justify-content: center;
+        margin-bottom: 1.25rem;
       }
+
       img {
         width: 7rem;
       }
@@ -27,9 +45,19 @@
     p {
       font-weight: 400;
       font-size: 0.875rem;
-      color: #b8b8b8;
+      color: #d1d1d1; 
       letter-spacing: 0.03125rem;
       margin-top: 1.25rem;
+
+      @media screen and (max-width: 480px) {
+        text-align: center; 
+        margin-top: 0.75rem; 
+      }
     }
+  }
+
+  @media screen and (max-width: 480px) {
+    background-size: contain;
+    background-position: top center; 
   }
 }

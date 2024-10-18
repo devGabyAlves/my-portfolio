@@ -7,8 +7,13 @@
     padding: 0 2rem 3.25rem;
   }
 
+  @media screen and (max-width: 480px) {
+    padding: 0 1rem 3.25rem; 
+  }
+
   [data-aos="fade-right"] {
     transform: translate3d(-300px, 0, 0);
+    will-change: transform; 
   }
 
   .skill-bx {
@@ -22,14 +27,14 @@
     border-radius: 4rem;
 
     @media screen and (max-width: 480px) {
-      padding: 3.75rem 0;
+      padding: 3.75rem 1rem;
     }
 
     p {
-      color: #b8b8b8;
+      color: #d1d1d1;
       font-size: 1.25rem;
       letter-spacing: 0.05rem;
-      line-height: 1;
+      line-height: 1.5; 
     }
 
     h2 {
@@ -52,6 +57,11 @@
       grid-gap: 2rem; 
       justify-items: center; 
       margin-top: 2rem;
+      transition: grid-template-columns 0.3s ease-in-out;
+
+      @media screen and (min-width: 1440px) {
+        grid-template-columns: repeat(6, 1fr); 
+      }
 
       @media screen and (max-width: 1024px) {
         grid-template-columns: repeat(3, 1fr); 
@@ -90,5 +100,13 @@
     top: 28%;
     bottom: 0;
     z-index: -1;
+    
+    @media screen and (max-width: 768px) {
+      width: 60%; 
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 80%;
+    }
   }
 }
