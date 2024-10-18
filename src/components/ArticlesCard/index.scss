@@ -1,0 +1,26 @@
+.article-card {
+  display: block;
+  position: relative;
+  border: 2px solid #4a2fbd;
+  border-radius: 1.875rem;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #4a2fbd;
+    color: #fff;
+    transform: translateY(-10px);
+  }
+
+  h4 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    line-height: 1;
+  }
+}

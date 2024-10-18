@@ -1,4 +1,5 @@
 import "./App.scss";
+import { Articles } from "./components/Articles/";
 import { Banner } from "./components/Banner";
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -13,6 +14,7 @@ export const App = () => {
       <Banner />
       <Skills />
       <Projects />
+      <Articles />
       <Contact />
       <Footer />
     </>

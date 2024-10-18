@@ -1,0 +1,43 @@
+.articles {
+    position: relative;
+    padding: 5rem 0;
+    background: #000;
+    z-index: 0;
+  
+    [data-aos="fade-up"] {
+      transform: translate3d(0, 300px, 0);
+    }
+  
+    h2 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  
+    p {
+      width: 56%;
+      margin: 0.875rem auto 1.875rem;
+      font-size: 1.25rem;
+      text-align: center;
+      line-height: 1;
+      letter-spacing: 0.05rem;
+      color: #b8b8b8;
+    }
+  
+    .articles-container {
+      @media screen and (max-width: 480px) {
+        padding: 0 1rem;
+      }
+    }
+  
+    .background-image-right {
+      position: absolute;
+      top: 20%;
+      bottom: 0;
+      width: 35%;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  
