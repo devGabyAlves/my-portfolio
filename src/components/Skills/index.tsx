@@ -64,7 +64,7 @@ export const Skills = () => {
               data-aos-duration="2000"
               data-aos-easing="ease-in-out"
             >
-              <h2>Habilidades</h2>
+              <h2>Skills</h2>
               <p>
               Meus conhecimentos e capacitação foram adquiridos através de conteúdos disponíveis na web, 
               projetos práticos e experiência no ambiente de trabalho. Ao longo de 2 anos e meio na área, 
