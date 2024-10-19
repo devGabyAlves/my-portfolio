@@ -67,9 +67,6 @@ export const Banner = () => {
             Integro práticas de segurança ao longo de todo o ciclo de vida do desenvolvimento de software, garantindo que os produtos que construo sejam tanto funcionais quanto protegidos.
             </p>
 
-            <a href="#connect">
-              Let's connect <BsArrowRightCircle size={25} />
-            </a>
           </Col>
 
           <Col xs={12} md={5} xl={5} className="rightColBanner">
