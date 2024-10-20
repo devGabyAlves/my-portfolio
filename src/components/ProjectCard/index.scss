@@ -4,10 +4,14 @@
   overflow: hidden;
   border-radius: 1.875rem;
   margin-bottom: 1.5rem;
+  height: 350px;
 
   img {
     transition: transform 0.4s ease-in-out;
     will-change: transform;
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
   }
 
   &::before {
@@ -37,6 +41,9 @@
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     will-change: transform, opacity;
     z-index: 2; 
+    height: 120px;
+    justify-content: center;
+    text-align: center;
 
     h4 {
       font-size: 1.875rem;
@@ -50,6 +57,7 @@
       font-weight: 400;
       font-size: 1rem;
       letter-spacing: 0.05rem;
+      text-overflow: ellipsis; 
     }
   }
 

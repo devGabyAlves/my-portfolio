@@ -1,5 +1,5 @@
 import ijContrutoraImg from '../../assets/img/ij-construtora.png'
-
+import codeSecImg from "../../assets/codeSec-Analyzer.png"
 
 export default [
   {
@@ -9,4 +9,11 @@ export default [
     link: 'https://www.construtoraij.com.br/',
 
   },
+  {
+    title: 'CodeSec Analyzer',
+    description: 'Análise de vulnerabilidades de código. Permite o upload de arquivos para uma verificação de segurança, retornando vulnerabilidades encontradas.',
+    imgUrl: codeSecImg,
+    link: 'https://github.com/devGabyAlves/codeSec-Analyzer',
+
+  }
 ]
