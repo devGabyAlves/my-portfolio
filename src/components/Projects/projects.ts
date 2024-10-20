@@ -1,5 +1,5 @@
 import ijContrutoraImg from '../../assets/img/ij-construtora.png'
-import codeSecImg from "../../assets/codeSec-Analyzer.png"
+import codeSecImg from "../../assets/img/codeSec-Analyzer.png"
 
 export default [
   {

@@ -12,6 +12,10 @@
   z-index: 1;
   overflow: hidden;
   border: none;
+  height: 400px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
 
   &:hover {
     background-color: #4a2fbd;
@@ -24,6 +28,16 @@
     font-weight: 700;
     letter-spacing: 0.05rem;
     line-height: 1;
+    margin-bottom: 1rem; 
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
   }
 
   &::before {
